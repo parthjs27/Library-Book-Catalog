@@ -8,7 +8,6 @@ This is a simple Java Spring Boot REST API for managing a library's book catalog
 
 - Add a new book  
 - Get all books 
-- Get book by ID
 - Delete book by ID
 - Update book availability
 - In-memory data store using List
