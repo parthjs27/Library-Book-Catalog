@@ -1,0 +1,107 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Library Book Catalog API</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            background: #f4f4f4;-->
+<!--            padding: 40px;-->
+<!--            color: #333;-->
+<!--            text-align: center;-->
+<!--        }-->
+<!--        h1 {-->
+<!--            font-size: 2.5rem;-->
+<!--            color: #2c3e50;-->
+<!--        }-->
+<!--        a {-->
+<!--            display: inline-block;-->
+<!--            margin: 1rem;-->
+<!--            padding: 1rem 2rem;-->
+<!--            background: #3498db;-->
+<!--            color: white;-->
+<!--            text-decoration: none;-->
+<!--            border-radius: 8px;-->
+<!--            transition: background 0.3s;-->
+<!--        }-->
+<!--        a:hover {-->
+<!--            background: #2980b9;-->
+<!--        }-->
+<!--        code {-->
+<!--            background: #eee;-->
+<!--            padding: 2px 6px;-->
+<!--            border-radius: 4px;-->
+<!--            font-size: 1rem;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>📚 Welcome to the Library Catalog API</h1>-->
+<!--<p>You can use this API to manage a list of books.</p>-->
+<!--<p>Try these endpoints:</p>-->
+<!--<a href="/books">GET /books</a>-->
+<!--<p>Use tools like <strong>Postman</strong> or <strong>curl</strong> to:</p>-->
+<!--<ul style="text-align: left; display: inline-block;">-->
+<!--    <li><code>POST /books</code> — Add a new book</li>-->
+<!--    <li><code>GET /books</code> — View all books</li>-->
+<!--    <li><code>GET /books/{id}</code> — Get book by ID</li>-->
+<!--    <li><code>DELETE /books/{id}</code> — Delete book</li>-->
+<!--    <li><code>PUT /books/{id}/availability?available=true</code> — Update availability</li>-->
+<!--</ul>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Catalog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen px-4 py-6">
+
+<div class="max-w-3xl mx-auto bg-white shadow-lg rounded-xl p-6">
+    <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">📚 Library Catalog</h1>
+
+    <!-- Alert Box -->
+    <div id="alert-box" class="hidden mb-6 p-4 rounded text-white font-semibold text-center"></div>
+
+    <!-- Add Book -->
+    <div class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">➕ Add Book</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input id="title" class="border rounded px-3 py-2" placeholder="Title" />
+            <input id="author" class="border rounded px-3 py-2" placeholder="Author" />
+            <input id="isbn" class="border rounded px-3 py-2" placeholder="ISBN" />
+            <label class="flex items-center space-x-2">
+                <input type="checkbox" id="available" class="h-4 w-4" checked />
+                <span>Available</span>
+            </label>
+        </div>
+        <button onclick="addBook()" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+            Add Book
+        </button>
+    </div>
+
+    <!-- View All Books -->
+    <div>
+        <h2 class="text-xl font-semibold mb-2">📖 View All Books</h2>
+        <button onclick="loadBooks()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded mb-4">
+            Load Books
+        </button>
+        <div id="book-list" class="space-y-4"></div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
