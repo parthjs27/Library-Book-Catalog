@@ -18,9 +18,10 @@ This is a simple Java Spring Boot REST API for managing a library's book catalog
 
 ## 🖥️ Tech Stack
 
-- Java 17+ / 21 / 24 (depending on your environment)
-- Spring Boot 3.5+
+- Java 24
+- Spring Boot 3.5.3
 - Maven
+- Packaging Jar
 - HTML + CSS + JavaScript (Vanilla)
 - Tailwind CSS (via CDN)
 - Postman (for testing)
