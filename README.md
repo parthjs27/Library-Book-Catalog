@@ -44,7 +44,7 @@ This is a simple Java Spring Boot REST API for managing a library's book catalog
 
 ---
 **Project Structure**:
-
+```bash
 📦 library-api/
 ├── src/
 │   └── main/
@@ -61,3 +61,4 @@ This is a simple Java Spring Boot REST API for managing a library's book catalog
 ├── .gitignore
 ├── pom.xml
 └── README.md
+```
