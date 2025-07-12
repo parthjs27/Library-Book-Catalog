@@ -1,17 +1,17 @@
 const API = "http://localhost:8080/books";
 
-// ✅ Validate form input
+// Validate form input
 function validateBookForm({ title, author, isbn }) {
   if (!title.trim() || !author.trim() || !isbn.trim()) {
     return {
       isValid: false,
-      message: "❌ Please fill in all fields: Title, Author, and ISBN.",
+      message: "Please fill in all fields: Title, Author, and ISBN.",
     };
   }
   return { isValid: true };
 }
 
-// ✅ Load all books
+// Load all books
 async function loadBooks() {
   const res = await fetch(API);
   const books = await res.json();
@@ -41,7 +41,7 @@ async function loadBooks() {
   });
 }
 
-// ✅ Add a new book
+// Add a new book
 async function addBook() {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
@@ -64,41 +64,41 @@ async function addBook() {
   });
 
   if (res.ok) {
-    showAlert("✅ Book added successfully!", "success");
+    showAlert("Book added successfully!", "success");
     clearForm();
   } else {
-    showAlert("❌ Error adding book", "error");
+    showAlert("Error adding book", "error");
   }
 }
 
-// ✅ Confirm before deleting a book
+// Confirm before deleting a book
 async function deleteBook(id) {
   const confirmed = confirm("Are you sure you want to delete this book?");
   if (!confirmed) return;
 
   const res = await fetch(`${API}/${id}`, { method: "DELETE" });
   if (res.ok) {
-    showAlert("🗑️ Book deleted successfully!", "error");
+    showAlert("Book deleted successfully!", "error");
     loadBooks();
   } else {
-    showAlert("❌ Failed to delete", "error");
+    showAlert("Failed to delete", "error");
   }
 }
 
-// ✅ Toggle book availability
+// Toggle book availability
 async function toggleAvailability(id, available) {
   const res = await fetch(`${API}/${id}/availability?available=${available}`, {
     method: "PUT",
   });
   if (res.ok) {
-    showAlert("🔁 Availability updated!", "success");
+    showAlert("Availability updated!", "success");
     loadBooks();
   } else {
-    showAlert("❌ Failed to update", "error");
+    showAlert("Failed to update", "error");
   }
 }
 
-// ✅ Display alert message
+// Display alert message
 function showAlert(message, type = "success") {
   const alertBox = document.getElementById("alert-box");
   alertBox.textContent = message;
@@ -114,7 +114,7 @@ function showAlert(message, type = "success") {
   }, 3000);
 }
 
-// ✅ Clear input fields
+// Clear input fields
 function clearForm() {
   document.getElementById("title").value = "";
   document.getElementById("author").value = "";
