@@ -71,7 +71,7 @@ async function addBook() {
   }
 }
 
-// Confirm before deleting a book
+// Confirm before deletion a book
 async function deleteBook(id) {
   const confirmed = confirm("Are you sure you want to delete this book?");
   if (!confirmed) return;
