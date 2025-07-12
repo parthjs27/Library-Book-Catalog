@@ -1,5 +1,3 @@
-# Library-Book-Catalog
-
 # 📚 Library Book Catalog API
 
 This is a simple Java Spring Boot REST API for managing a library's book catalog.
