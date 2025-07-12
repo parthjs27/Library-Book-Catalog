@@ -43,7 +43,7 @@ This is a simple Java Spring Boot REST API for managing a library's book catalog
    - Postman: [Postman Collection .json](https://drive.google.com/file/d/18jQg6EPO0cWuTE3XRFuIrAot41toGt_3/view?usp=sharing)
 
 ---
-**Project Structure**:
+### 📁 Project Structure:
 ```bash
 📦 library-api/
 ├── src/
@@ -62,3 +62,10 @@ This is a simple Java Spring Boot REST API for managing a library's book catalog
 ├── pom.xml
 └── README.md
 ```
+---
+### Project Demo
+![](project_images/img1.png)
+![](project_images/img2.png)
+
+---
+   
