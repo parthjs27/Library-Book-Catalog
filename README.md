@@ -27,12 +27,3 @@ This is a simple Java Spring Boot REST API for managing a library's book catalog
 - Postman (for testing)
 
 ---
-
-## ▶️ How to Run
-
-### Backend:
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/library-api.git
-   cd library-api
